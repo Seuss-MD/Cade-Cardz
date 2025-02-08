@@ -1,0 +1,24 @@
+[gd_scene load_steps=2 format=3 uid="uid://bcpeuiqjdgeys"]
+
+[ext_resource type="Script" path="res://Scenes/win.gd" id="1_8p23d"]
+
+[node name="Win" type="Node2D"]
+script = ExtResource("1_8p23d")
+
+[node name="Text" type="RichTextLabel" parent="."]
+offset_left = 337.0
+offset_top = 187.0
+offset_right = 1378.0
+offset_bottom = 510.0
+theme_override_font_sizes/normal_font_size = 190
+text = "You Lose..."
+
+[node name="PlayAgainButton" type="Button" parent="."]
+offset_left = 557.0
+offset_top = 534.0
+offset_right = 1087.0
+offset_bottom = 744.0
+theme_override_font_sizes/font_size = 70
+text = "Play Again?"
+
+[connection signal="pressed" from="PlayAgainButton" to="." method="_on_play_again_button_pressed"]

@@ -1,0 +1,31 @@
+[gd_scene load_steps=4 format=3 uid="uid://cf7vjwehyx3st"]
+
+[ext_resource type="Script" path="res://Scripts/card.gd" id="1_6ki8k"]
+[ext_resource type="Texture2D" uid="uid://cwlvu1xxmfvbe" path="res://images/cards/default.png" id="1_11q4g"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hh6o5"]
+size = Vector2(180, 265)
+
+[node name="Card" type="Node2D"]
+position = Vector2(276, 460)
+scale = Vector2(0.8, 0.8)
+script = ExtResource("1_6ki8k")
+
+[node name="cardImage" type="Sprite2D" parent="."]
+texture = ExtResource("1_11q4g")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_hh6o5")
+
+[node name="Points" type="RichTextLabel" parent="."]
+modulate = Color(0, 0, 0, 1)
+offset_left = -22.0
+offset_top = 76.0
+offset_right = 18.0
+offset_bottom = 116.0
+text = "0"
+
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]

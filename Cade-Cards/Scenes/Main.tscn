@@ -1,0 +1,48 @@
+[gd_scene load_steps=3 format=3 uid="uid://ciugle0rh3q2b"]
+
+[ext_resource type="Script" path="res://Scenes/menu.gd" id="1_vgttw"]
+[ext_resource type="Texture2D" uid="uid://dsrc401rwvgua" path="res://images/Other/backgroundMenu.png" id="2_jbkop"]
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_vgttw")
+
+[node name="startButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.183
+anchor_top = 0.768
+anchor_right = 0.183
+anchor_bottom = 0.768
+offset_left = -220.36
+offset_top = -55.44
+offset_right = 219.64
+offset_bottom = 87.56
+theme_override_font_sizes/font_size = 99
+text = "Start"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 134.0
+offset_top = 543.0
+offset_right = 881.0
+offset_bottom = 846.0
+theme_override_font_sizes/normal_font_size = 27
+text = "Rules:
+The Goal is to play cards that total to at least 50 points.
+
+You will automatically draw a card each turn.
+You will go first.
+You play cards by clicking and dragging them."
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = -4
+position = Vector2(961, 541)
+texture = ExtResource("2_jbkop")
+
+[connection signal="pressed" from="startButton" to="." method="_on_start_button_pressed"]

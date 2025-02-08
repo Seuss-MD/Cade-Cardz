@@ -1,0 +1,15 @@
+const CARDS = { #Points, can destory,
+	"Shiny Nickle" : [+1, false],
+	"3 Dolla" : [+3, false],
+	"Picture of Markiplier" : [+4, false],
+	"5 Dolla" : [+5, false],
+	"10 Dolla" : [+10, false],
+	"Treasure Trove" : [+30, false],
+	"Golden F-150" : [+24, false],
+	"Knife" : [0, true],
+	"Flies" : [-1, false],
+	"Worms" : [-2, false],
+	"Raccoons" : [-6, false],
+	"Crabs" : [-10, false],
+	"Nuclear Waste" : [-20, false]
+}
